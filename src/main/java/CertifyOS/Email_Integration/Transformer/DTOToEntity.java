@@ -1,8 +1,7 @@
-package Transformer;
+package CertifyOS.Email_Integration.Transformer;
 
 import CertifyOS.Email_Integration.Model.Provider;
-import CertifyOS.Email_Integration.ProviderRequestDTO;
-import org.springframework.beans.factory.annotation.Autowired;
+import CertifyOS.Email_Integration.RequestDTO.ProviderRequestDTO;
 
 
 public class DTOToEntity {
@@ -18,4 +17,5 @@ public class DTOToEntity {
                 .customerName(providerRequestDTO.getCustomerName())
                 .build();
     }
+
 }

@@ -1,8 +1,7 @@
-package CertifyOS.Email_Integration.ProviderController;
+package CertifyOS.Email_Integration.Controller;
 
-import CertifyOS.Email_Integration.Model.Provider;
-import CertifyOS.Email_Integration.ProviderRequestDTO;
-import CertifyOS.Email_Integration.ProviderService.ProviderService;
+import CertifyOS.Email_Integration.RequestDTO.ProviderRequestDTO;
+import CertifyOS.Email_Integration.Service.ProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 
 import java.util.List;
 
