@@ -78,21 +78,21 @@ public class ProviderService {
 
 ////         -- Multiple Reasons - Centene
           String formattedEmailBody = emailBody.replaceAll("(\\d+\\.\\s*)", "$1");
-          String subject = "Re: Centene Health Re-Credentialing: Outreach Reason :"  + provider.getName() + " " + provider.getType() + " " + providerNpi + " : Certify Outreach";
+          String subject = "Re: Oscar Health Credentialing: Outreach Reason :"  + provider.getName() + " " + provider.getType() + ", " + providerNpi + " : Certify Outreach";
           String body = "<p>Dear " + providerName + ",</p>" +
-                "<p>My name is Ashwin Das and Centene Health has collaborated with us to complete provider credentialing. We hope this letter finds you well. As part of our re-credentialing process, we have conducted a review of your credentialing file and found that some required documentation is missing or incomplete.</p>" +
+                "<p>My name is Ashwin Das and Oscar Health has collaborated with us to complete provider credentialing. We hope this letter finds you well. As part of our credentialing process, we have conducted a review of your credentialing file and found that some required documentation is missing or incomplete.</p>" +
 //                "<p>To finalize your credentialing, Your credentialing due date is 11/30/2024 and we have still not heard back from you. Please submit the information requested below as soon as possible to avoid network termination from Oscar</p>" +
-                "<p>To complete your re-credentialing, please provide or update the following documents or attest CAQH at your earliest convenience.</p>" +
+                "<p>To complete your credentialing, please provide or update the following documents or attest CAQH at your earliest convenience.</p>" +
                 "<p>" + formattedEmailBody + "</p>" +
                 "<p>Please submit these documents as soon as possible to avoid delays in your credentialing process. Your prompt attention to this matter will help us ensure that your participation and status within our network remains active and in compliance.</p>" +
 //                "<p>As soon as this is complete, please <b>reply all</b> or send us an email at <a href='mailto:credentialing@certifyos.com'>credentialing@certifyos.com</a>, and we can complete your credentialing with Oscar Health Plan.</p>" +
 //                "<p>If you have already submitted these documents or if you require any assistance or clarification, please do not hesitate to contact us at <a href='mailto:credentialing@certifyos.com'>credentialing@certifyos.com</a>.</p>" +
 //                "<p>We greatly appreciate your cooperation in this process and look forward to continuing our partnership in providing high-quality care to our patients.</p>" +
 //                  "<p>Thank you for your prompt attention to this matter.</p>";
-                "<li><a href=\"https://drive.google.com/file/d/15BNgd6RC-2VWE8e1TUOY4IM36ZKwwJTh/view?usp=sharing\">Disclosure of Ownership Control</a> (for CA, FL, GA, ID, KS, LA, MI, MO, MS, NJ, NM, NV, OH, SD, TN, TX and WA)</li>" +
-                "<li><a href=\"https://drive.google.com/file/d/15BH9y88J-Mi3k2nxBiQL5rtkpUDTxH6Q/view?usp=drive_link\">Collaborative Agreement (if applicable)</li>" +
-                "<p>As soon as this is complete, please <b>reply all</b> or send us an email at credentialing@certifyos.com, and we can complete your re-credentialing with Centene Health Network.</p>" +
-                "<p>If you have any questions or are no longer a part of the Centene Health Network, please email us at credentialing@certifyos.com.</p>" +
+//                "<li><a href=\"https://drive.google.com/file/d/15BNgd6RC-2VWE8e1TUOY4IM36ZKwwJTh/view?usp=sharing\">Disclosure of Ownership Control</a> (for CA, FL, GA, ID, KS, LA, MI, MO, MS, NJ, NM, NV, OH, SD, TN, TX and WA)</li>" +
+//                "<li><a href=\"https://drive.google.com/file/d/15BH9y88J-Mi3k2nxBiQL5rtkpUDTxH6Q/view?usp=drive_link\">Collaborative Agreement (if applicable)</li>" +
+                "<p>As soon as this is complete, please <b>reply all</b> or send us an email at credentialing@certifyos.com, and we can complete your credentialing with Oscar Health Network.</p>" +
+                "<p>If you have any questions or are no longer a part of the Oscar Health Network, please email us at credentialing@certifyos.com.</p>" +
                 "<p>Thank you!</p>";
 
         try {
@@ -101,8 +101,8 @@ public class ProviderService {
 
             helper.setFrom("ashwind@certifyos.com");
             helper.setTo(provider.getEmail());
-            helper.setCc(new String[]{assigneeEmail,"credentialing@certifyos.com","recred-corporate@centene.com"});
-//            helper.setCc(new String[]{assigneeEmail,"credentialing@certifyos.com"});
+//            helper.setCc(new String[]{assigneeEmail,"credentialing@certifyos.com","recred-corporate@centene.com"});
+            helper.setCc(new String[]{assigneeEmail,"credentialing@certifyos.com"});
             helper.setSubject(subject);
             helper.setText(body, true);  // Set to true to send HTML content
 
